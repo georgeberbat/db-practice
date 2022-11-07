@@ -2,6 +2,7 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 using PhoneBook.Dal;
@@ -12,9 +13,10 @@ using PhoneBook.Dal.Enums;
 namespace PhoneBook.Dal.Migrations
 {
     [DbContext(typeof(PhoneBookDbContext))]
-    partial class PhoneBookDbContextModelSnapshot : ModelSnapshot
+    [Migration("20221107233813_RemoveUnusedModel")]
+    partial class RemoveUnusedModel
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

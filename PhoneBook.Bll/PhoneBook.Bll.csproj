@@ -18,9 +18,6 @@
       <Compile Update="Models\GroupDto.cs">
         <DependentUpon>UserData.cs</DependentUpon>
       </Compile>
-      <Compile Update="Models\AddressDto.cs">
-        <DependentUpon>UserData.cs</DependentUpon>
-      </Compile>
       <Compile Update="Models\PhoneCategoryDto.cs">
         <DependentUpon>UserData.cs</DependentUpon>
       </Compile>

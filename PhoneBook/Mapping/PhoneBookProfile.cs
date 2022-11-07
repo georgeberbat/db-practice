@@ -13,7 +13,6 @@ public class PhoneBookProfile : Profile
 
         CreateMap<UserDb, UserData>(MemberList.Destination)
             .ForMember(x => x.PhoneNumbers, e => e.MapFrom(x => x.Phones));
-        CreateMap<AddressDb, AddressDto>(MemberList.Destination);
         CreateMap<PhoneDataDb, PhoneData>(MemberList.Destination);
         CreateMap<PhoneCategoryDb, PhoneCategoryDto>(MemberList.Destination);
 
@@ -27,7 +26,6 @@ public class PhoneBookProfile : Profile
         CreateMap<SaveUserRequest, UserDb>(MemberList.Source)
             .ForMember(x => x.Phones, expression => expression.MapFrom(x => x.PhoneNumbers))
             .ForSourceMember(x => x.GroupIds, expression => expression.DoNotValidate());
-        CreateMap<AddressDto, AddressDb>(MemberList.Source);
         CreateMap<SavePhoneNumberDto, PhoneDataDb>(MemberList.Source)
             .ForMember(x => x.CategoryId, expression => expression.MapFrom(x => x.PhoneCategoryId));
 

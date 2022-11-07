@@ -17,7 +17,6 @@ namespace PhoneBook.Dal
         }
 
         public DbSet<UserDb> Users => Set<UserDb>();
-        public DbSet<AddressDb> Addresses => Set<AddressDb>();
         public DbSet<GroupDb> Groups => Set<GroupDb>();
         public DbSet<PhoneCategoryDb> PhoneCategories => Set<PhoneCategoryDb>();
         public DbSet<PhoneDataDb> Phones => Set<PhoneDataDb>();
