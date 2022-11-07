@@ -1,0 +1,23 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net6.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <PackageReference Include="ClosedXML" Version="0.96.0" />
+      <PackageReference Include="Microsoft.AspNetCore.Mvc.Versioning" Version="5.0.0" />
+      <PackageReference Include="Microsoft.AspNetCore.Mvc.Versioning.ApiExplorer" Version="5.0.0" />
+      <PackageReference Include="Microsoft.OpenApi" Version="1.2.3" />
+      <PackageReference Include="Swashbuckle.AspNetCore.SwaggerGen" Version="6.4.0" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Compile Update="Services\DataProvider.cs">
+        <DependentUpon>IDataProvider.cs</DependentUpon>
+      </Compile>
+    </ItemGroup>
+
+</Project>
